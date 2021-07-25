@@ -1,0 +1,198 @@
+*,
+ ::after,
+ ::before {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+header,
+footer {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+}
+
+header {
+  position: relative;
+}
+
+main {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: auto;
+  background-color: #DCDCDC;
+}
+
+.container {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.col-5,
+.col-7,
+.col-12 {
+  position: relative;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.col-7 {
+  max-width: 66.66%;
+  flex: 0 0 66%;
+}
+
+.col-5 {
+  max-width: 33.33%;
+  flex: 0 0 33%;
+}
+
+.col-12 {
+  max-width: 100%;
+  flex: 0 0 100%;
+}
+
+header img {
+  width: 100%;
+  height: 262px;
+}
+
+header .col-5 {
+  padding-right: 5px;
+}
+
+.rectangle {
+  background: #1D1511;
+}
+
+header .rectangle {
+  height: 262px;
+  box-shadow: 0px 5px 5px #808080;
+}
+
+header .container {
+  padding-right: 0;
+}
+
+footer .rectangle {
+  padding: 24px;
+  box-shadow: 0px -5px 5px #808080;
+}
+
+footer img {
+  height: 100px;
+}
+
+footer .flex-block {
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  height: 100%;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+p {
+  text-align: justify;
+  word-spacing: 4px;
+  line-height: 150%;
+}
+
+h1 {
+  font-size: 36px;
+  letter-spacing: 10px;
+  line-height: 150%;
+  color: #FFFFFF;
+  text-align: center;
+  padding-top: 25px;
+}
+
+h2 {
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.contacts ul {
+  padding-inline-start: 17px;
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #DCDCDC;
+  color: #444444;
+}
+
+.hljs-keyword {
+  font-weight: 700;
+}
+
+.hljs-title {
+  color: #870000;
+  font-weight: 700;
+}
+
+.hljs-string {
+  color: #870000;
+}
+
+.link-metis::before {
+  transform-origin: 100% 50%;
+  transform: scale3d(0, 1, 1);
+  transition: transform 0.3s;
+}
+
+.link-metis:hover::before {
+  transform-origin: 0% 50%;
+  transform: scale3d(1, 1, 1);
+}
+
+.link {
+  cursor: pointer;
+  font-size: 18px;
+  position: relative;
+  white-space: nowrap;
+  color: #FFFFFF;
+}
+
+.link::before,
+.link::after {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  top: 100%;
+  left: 0;
+  pointer-events: none;
+}
+
+.link::before {
+  content: '';
+}
